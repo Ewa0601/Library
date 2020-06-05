@@ -6,19 +6,12 @@ public class Book extends Publication {
     private int pages;
     private String isbn;
 
-    //konstruktory
-    public Book(int year, String title, String publisher, String author,
-         int pages, String isbn) {
-        this(year, title, publisher, author, pages);
-        this.isbn = isbn;
-    }
-
-    public Book(int year, String title, String publisher, String author, int pages) {
-        setTitle(title);
-        setYear(year);
-        setPublisher(publisher);
+    //konstruktor
+    public Book(String title, String author, String publisher, int year, int pages, String isbn) {
+        super(title, publisher, year);
         this.author = author;
         this.pages = pages;
+        this.isbn = isbn;
     }
 
     //gettery i settery
@@ -49,9 +42,7 @@ public class Book extends Publication {
     //drukowanie informacji
     public void printInfo() {
         String info = getTitle() + "; " + author + "; " + getYear() +
-                "; " + pages + "; " + getPublisher();
-        if (isbn != null)
-            info = info + "; " + isbn;
+                "; " + pages + "; " + getPublisher() + "; " + isbn;
         System.out.println(info);
     }
 }
