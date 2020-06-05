@@ -40,6 +40,8 @@ public class Book extends Publication {
     }
 
     //drukowanie informacji
+
+    @Override
     public void printInfo() {
         String info = getTitle() + "; " + author + "; " + getYear() +
                 "; " + pages + "; " + getPublisher() + "; " + isbn;

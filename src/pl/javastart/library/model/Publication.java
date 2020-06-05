@@ -34,4 +34,7 @@ class Publication {
     void setYear(int year) {
         this.year = year;
     }
+
+    public void printInfo() {
+    }
 }
