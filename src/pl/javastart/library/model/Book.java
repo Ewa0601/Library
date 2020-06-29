@@ -3,12 +3,12 @@ package pl.javastart.library.model;
 import java.util.Objects;
 
 public class Book extends Publication {
-    //Pola
+    public static final String TYPE = "Książka";
+
     private String author;
     private int pages;
     private String isbn;
 
-    //konstruktor
     public Book(String title, String author, String publisher, int year, int pages, String isbn) {
         super(title, publisher, year);
         this.author = author;
@@ -16,7 +16,6 @@ public class Book extends Publication {
         this.isbn = isbn;
     }
 
-    //gettery i settery
     public String getAuthor() {
         return author;
     }
@@ -39,6 +38,17 @@ public class Book extends Publication {
 
     public void setIsbn(String isbn) {
         this.isbn = isbn;
+    }
+
+    @Override
+    public String toCsv() {
+        return (TYPE + ";") +
+                getTitle() + ";" +
+                getPublisher() + ";" +
+                getYear() + ";" +
+                author + ";" +
+                pages + ";" +
+                isbn + "";
     }
 
     @Override
