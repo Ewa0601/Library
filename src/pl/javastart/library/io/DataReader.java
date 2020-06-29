@@ -13,8 +13,8 @@ public class DataReader {
         this.printer = printer;
     }
 
-    public void close() {
-        sc.close();
+    public String getString() {
+        return sc.nextLine();
     }
 
     public int getInt() {
@@ -23,6 +23,10 @@ public class DataReader {
         } finally {
             sc.nextLine();
         }
+    }
+
+    public void close() {
+        sc.close();
     }
 
     public Book readAndCreateBook() {
