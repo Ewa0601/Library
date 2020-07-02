@@ -48,7 +48,7 @@ public class Magazine extends Publication {
                 getYear() + ";" +
                 month + ";" +
                 day + ";" +
-                language + ";";
+                language + "";
     }
 
     @Override
