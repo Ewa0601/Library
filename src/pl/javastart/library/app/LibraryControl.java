@@ -12,7 +12,10 @@ import pl.javastart.library.model.Book;
 import pl.javastart.library.model.Library;
 import pl.javastart.library.model.Magazine;
 import pl.javastart.library.model.Publication;
+import pl.javastart.library.model.comparator.AlphabeticalTitleComparator;
+import pl.javastart.library.model.comparator.DateComparator;
 
+import java.util.Arrays;
 import java.util.InputMismatchException;
 
 class LibraryControl {
@@ -106,11 +109,6 @@ class LibraryControl {
         }
     }
 
-    private void printBooks() {
-        Publication[] publications = library.getPublications();
-        printer.printBooks(publications);
-    }
-
     private void addMagazine() {
         try {
             Magazine magazine = dataReader.readAndCreateMagazine();
@@ -122,21 +120,20 @@ class LibraryControl {
         }
     }
 
+    private void printBooks() {
+        Publication[] publications = getSortedPublications();
+        printer.printBooks(publications);
+    }
+
     private void printMagazines() {
-        Publication[] publications = library.getPublications();
+        Publication[] publications = getSortedPublications();
         printer.printMagazines(publications);
     }
 
-    private void deleteMagazine() {
-        try {
-            Magazine magazine = dataReader.readAndCreateMagazine();
-            if (library.removePublication(magazine))
-                printer.printLine("Usunięto magazyn.");
-            else
-                printer.printLine("Brak wskazanego magazynu.");
-        } catch (InputMismatchException e) {
-            printer.printLine("Nie udało się utworzyć magazynu, niepoprawne dane.");
-        }
+    private Publication[] getSortedPublications() {
+        Publication[] publications = library.getPublications();
+        Arrays.sort(publications, new AlphabeticalTitleComparator());
+        return publications;
     }
 
     public void deleteBook() {
@@ -148,6 +145,18 @@ class LibraryControl {
                 printer.printLine("Brak wskazanej książki.");
         } catch (InputMismatchException e) {
             printer.printLine("Nie udało się utworzyć książki, niepoprawne dane.");
+        }
+    }
+
+    private void deleteMagazine() {
+        try {
+            Magazine magazine = dataReader.readAndCreateMagazine();
+            if (library.removePublication(magazine))
+                printer.printLine("Usunięto magazyn.");
+            else
+                printer.printLine("Brak wskazanego magazynu.");
+        } catch (InputMismatchException e) {
+            printer.printLine("Nie udało się utworzyć magazynu, niepoprawne dane.");
         }
     }
 
