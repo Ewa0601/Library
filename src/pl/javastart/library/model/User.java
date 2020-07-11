@@ -3,7 +3,7 @@ package pl.javastart.library.model;
 import java.io.Serializable;
 import java.util.Objects;
 
-public abstract class User implements Serializable {
+public abstract class User implements Serializable, CsvConvertible {
     private String firstName;
     private String lastName;
     private String pesel;
@@ -39,6 +39,11 @@ public abstract class User implements Serializable {
     }
 
     @Override
+    public String toString() {
+        return firstName + " " + lastName + " - " + pesel;
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -52,11 +57,4 @@ public abstract class User implements Serializable {
     public int hashCode() {
         return Objects.hash(firstName, lastName, pesel);
     }
-
-    @Override
-    public String toString() {
-        return firstName + " " + lastName + " - " + pesel;
-    }
-
-    public abstract String toCsv();
 }
