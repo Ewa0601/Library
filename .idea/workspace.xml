@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="365ff691-c56e-4a3a-b71d-c3f2653895d0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Library.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/pl/javastart/library/app/LibraryApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/pl/javastart/library/app/LibraryApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/pl/javastart/library/app/LibraryControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/pl/javastart/library/app/LibraryControl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/javastart/library/app/LibraryApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/javastart/library/app/LibraryApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pl/javastart/library/app/LibraryControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/javastart/library/app/LibraryControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/javastart/library/model/Publication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/javastart/library/model/Publication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/javastart/library/io/ConsolePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/javastart/library/io/ConsolePrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/javastart/library/io/DataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/javastart/library/io/DataReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/javastart/library/io/file/CsvFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/javastart/library/io/file/CsvFileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/javastart/library/model/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/javastart/library/model/Library.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +32,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -118,7 +118,8 @@
       <workItem from="1593451560378" duration="717000" />
       <workItem from="1593628677380" duration="233000" />
       <workItem from="1593686048174" duration="4261000" />
-      <workItem from="1593806274088" duration="2855000" />
+      <workItem from="1593806274088" duration="3265000" />
+      <workItem from="1594381601505" duration="7575000" />
     </task>
     <servers />
   </component>
