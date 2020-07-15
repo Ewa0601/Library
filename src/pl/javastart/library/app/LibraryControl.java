@@ -6,7 +6,9 @@ import pl.javastart.library.io.DataReader;
 import pl.javastart.library.io.file.FileManager;
 import pl.javastart.library.io.file.FileManagerBuilder;
 import pl.javastart.library.model.*;
+import pl.javastart.library.model.comparator.AlphabeticalTitleComparator;
 
+import java.util.Comparator;
 import java.util.InputMismatchException;
 
 class LibraryControl {
@@ -117,7 +119,6 @@ class LibraryControl {
         }
     }
 
-    //dodana metoda
     private void addUser() {
         LibraryUser libraryUser = dataReader.createLibraryUser();
         try {
@@ -129,16 +130,20 @@ class LibraryControl {
 
     //zmiana logiki
     private void printBooks() {
-        printer.printBooks(library.getPublications().values());
+        printer.printBooks(library.getSortedPublications(new AlphabeticalTitleComparator()));
     }
 
     private void printMagazines() {
-        printer.printMagazines(library.getPublications().values());
+        printer.printMagazines(library.getSortedPublications(new AlphabeticalTitleComparator()));
     }
 
-    //dodana metoda
     private void printUsers() {
-        printer.printUsers(library.getUsers().values());
+        printer.printUsers(library.getSortedUsers(new Comparator<LibraryUser>() {
+            @Override
+            public int compare(LibraryUser u1, LibraryUser u2) {
+                return u1.getLastName().compareToIgnoreCase(u2.getLastName());
+            }
+        }));
     }
 
     public void deleteBook() {

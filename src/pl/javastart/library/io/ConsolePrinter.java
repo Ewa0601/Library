@@ -5,7 +5,7 @@ import pl.javastart.library.model.*;
 import java.util.Collection;
 
 public class ConsolePrinter {
-    //zmiana typu parametru
+
     public void printBooks(Collection<Publication> publications) {
         int counter = 0;
         for (Publication publication : publications) {
@@ -18,7 +18,6 @@ public class ConsolePrinter {
             printLine("Brak książek w bibliotece");
     }
 
-    //zmiana typu parametru
     public void printMagazines(Collection<Publication> publications) {
         int counter = 0;
         for (Publication publication : publications) {
@@ -31,7 +30,6 @@ public class ConsolePrinter {
             printLine("Brak magazynów w bibliotece");
     }
 
-    //dodana metoda
     public void printUsers(Collection<LibraryUser> users) {
         for (LibraryUser user : users) {
             printLine(user.toString());
