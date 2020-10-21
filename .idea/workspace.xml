@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="365ff691-c56e-4a3a-b71d-c3f2653895d0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/javastart/library/io/file/CsvFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/javastart/library/io/file/CsvFileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Library/pl/javastart/library/app/LibraryApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/pl/javastart/library/app/LibraryApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/javastart/library/app/LibraryApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/javastart/library/app/LibraryApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/javastart/library/io/ConsolePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/javastart/library/io/ConsolePrinter.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +125,8 @@
       <workItem from="1595853567434" duration="1908000" />
       <workItem from="1596311495197" duration="94000" />
       <workItem from="1596375186826" duration="1201000" />
-      <workItem from="1597142814196" duration="2913000" />
+      <workItem from="1597142814196" duration="3322000" />
+      <workItem from="1603304420531" duration="883000" />
     </task>
     <servers />
   </component>
